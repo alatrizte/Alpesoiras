@@ -90,8 +90,9 @@ def procesar_imagenes():
             
             progress_bar.set(float(percentage_compl) / 100)
 
-
-            # plt.show()
+            check_state = check_var.get()
+            if check_state == "on":
+                plt.show()
 
         finishLabel.configure(text = "Imáxes cortadas!", text_color="green")
 
@@ -105,7 +106,7 @@ customtkinter.set_default_color_theme("blue")
 # Crear la ventana principal
 app = customtkinter.CTk()
 app.title("Alpesoiras")
-app.geometry("600x700")
+app.geometry("600x800")
 
 reductor = 0.85
 
@@ -130,6 +131,11 @@ customtkinter.CTkLabel(app, text="Cartafol de destino:").pack(pady=(10, 0))
 entrada_destino = customtkinter.CTkEntry(app, width=350, height=40)
 entrada_destino.pack()
 customtkinter.CTkButton(app, text="Seleccionar", command=seleccionar_carpeta_destino).pack(pady=(7, 0))
+
+# Mostrar proceso imagenes
+check_var = customtkinter.StringVar(value="off")
+checkbox = customtkinter.CTkCheckBox(app, text="Activar a vista do proceso de imaxes.", variable=check_var, onvalue="on", offvalue="off")
+checkbox.pack(pady=20)
 
 # Botón para procesar
 font_bold = customtkinter.CTkFont(weight="bold", size=14)

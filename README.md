@@ -29,9 +29,14 @@ Todas las imágenes de la carpeta de origen se copiarán recortadas a la carpeta
 Una vez terminada la copia mata el proceso en la terminal pulsando
 `Ctrl + Z`
 
-![Logo del proyecto](screen.png)
+![captura de pantalla](screen.png)
 
 
+## Modo vista previa
 
+Si activas **"Activar a vista do proceso de imaxes."** por cada imágen se mostrará una ventana de *vista previa* de la imagen sin recortar, de la zona seleccionada y de la salida final.
 
+![vista previa de recortes](dev_view.png)
+
+> *Ten en cuenta que si son muchas las imágenes a recortar el proceso puede prolongarse mucho. Si deseas abortar esta vista mata el proceso en la terminal y vuelve a lanzar la cola de recorte.*
 
